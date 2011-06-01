@@ -39,5 +39,5 @@ server = http.createServer (req, res) ->
 				
 	cli.on "error", (e) -> e404(res)
 
-server.listen 1337
-console.log 'YTProxy running at http://127.0.0.1:1337/'
+server.listen process.env.PORT || 1337
+console.log 'YTProxy running at http://127.0.0.1:/' + process.env.PORT || 1337
